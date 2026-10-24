@@ -1,0 +1,60 @@
+/* Estilo existente para o body (exemplo) */
+@font-face {
+    font-family: 'Nasalization Rg';
+    src: url('nasalization-rg.woff') format('woff');
+}
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5;
+    color: #333a40;
+    /* Adicionamos font-size ao html para base do rem, ou usamos o padrão do navegador */
+    /* font-size: 16px; */ /* Se o html ou body tiver isso, 1rem = 16px */
+}
+#introduction img {
+    max-width: 100%; /* nunca passa da largura da seção */
+    height: auto;    /* mantém a proporção */
+}
+main {
+    width: 70%; /* O conteúdo principal ocupará 80% da largura do seu pai (o body) */
+    max-width: 900px; /* Mas não passará de 900 pixels de largura */
+    margin-left: auto; /* Truque para centralizar elementos de bloco com largura definida */
+    margin-right: auto; /* Truque para centralizar elementos de bloco com largura definida */
+    background-color: white; /* Dando um fundo branco para o conteúdo principal */
+    padding: 20px; /* Um espaçamento interno (veremos padding em detalhes depois) */
+}
+.hobby-highlight {
+    color: #0077cc;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.75rem;
+    color: #005fa3; /* diferente do h1 (#333a40) */
+}
+
+/* Vamos mudar alguns font-sizes para usar rem ou em */
+header h1#page-title { /* Combinando seletor de elemento e ID */
+    font-family: 'Nasalization Rg';
+    font-size: 2.75rem; /* Se 1rem = 16px, então 2.25rem = 36px */
+    background-color: aquamarine;
+    color: #333a40;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.75rem; /* Se 1rem = 16px, então 1.75rem = 28px */
+    /* ...outros estilos ... */
+}
+
+p, li {
+    font-size: 1rem; /* Se 1rem = 16px, então 1rem = 16px. Ou 1.0625rem para 17px */
+    /* ...outros estilos ... */
+}
+footer{
+    text-align: center;
+
+}
+footer li, footer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
