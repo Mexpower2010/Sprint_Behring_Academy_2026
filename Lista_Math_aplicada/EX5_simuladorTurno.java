@@ -1,4 +1,4 @@
-public class simuladorTurno {
+public class EX5_simuladorTurno {
     public static void main(String[] args) {
         String[] jogadores = {"Alice", "Bob", "Carol", "Dan"};
 
