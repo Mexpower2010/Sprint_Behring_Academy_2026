@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Book Library - Add New Review</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html" class="logo-link">
+                <div>
+                    <img  class = "logo" src="../assets/images/logo.png" alt="MBook Logo Icon" height="40">
+                    <span>MBook</span>
+                </div>
+            </a>
+
+            <nav>
+                <button class="add-button" aria-label="Add new Book review">+</button>
+            </nav>
+        </header>
+
+        <main>
+            <p class="demo-notice">Demo form with fictional data: reviews are not saved, no book is added and the poster image is not loaded.</p>
+            <div class="form-page-container">
+
+    <h2>New Review</h2>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="Book-name">Book Name</label>
+                <input type="text" id="Book-name" name="title" required placeholder="Enter the Book title">
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" placeholder="Enter the author's name">
+            </div>
+
+            <div class="form-group">
+                <label for="genre">Genre</label>
+                <input type="text" id="genre" name="genre" placeholder="Enter the genre">
+            </div>
+
+            <div class="form-group">
+                <label for="poster-url">Poster URL</label>
+                <input type="url" id="poster-url" name="posterUrl" placeholder="Paste image URL (jpg or png)">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="rating-select">Stars</label>
+                    <select id="rating-select" name="rating" required>
+                        <option value="">Choose a rating</option>
+                        <option value="1">★☆☆☆☆ - 1 Star</option>
+                        <option value="2">★★☆☆☆ - 2 Stars</option>
+                        <option value="3">★★★☆☆ - 3 Stars</option>
+                        <option value="4">★★★★☆ - 4 Stars</option>
+                        <option value="5">★★★★★ - 5 Stars</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="read-date">Read Date</label>
+                    <input type="date" id="read-date" name="readDate">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="review-text">My Review</label>
+                <textarea id="review-text" name="review" rows="5" required placeholder="Write your thoughts here..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar</button>
+
+        </form>
+    </div>
+</div>
+
+
+        </main>
+
+        <footer>
+        <p>&copy; 2026 MBook &ndash; My Review Book</p>
+        </footer>
+    </body>
+
+</html>

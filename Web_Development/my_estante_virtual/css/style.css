@@ -1,0 +1,389 @@
+/* --- Basic Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edf2f4;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  background-color: #2b2d42;
+  color: #ffffff;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 182px;
+}
+header a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Obtem a cor do "pai" */ 
+}
+.logo-link {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logo-link:hover,
+.logo-link:focus-visible {
+  opacity: 0.75;
+}
+
+header span {
+  font-size: 36px;
+}
+
+.add-button {
+  background-color: #ef233c;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #f4f5f6;
+  text-align: center;
+  font-size: 16px;
+  padding: 15.25px;
+}
+
+.book-list-container {
+  padding: 26px 20px;
+  max-width: 1020px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 60px;
+}
+/* Definição da nossa animação de entrada chamada 'fadeInUp' */
+@keyframes fadeInUp {
+  from { /* Estado inicial (0% da animação) */
+    opacity: 0;                  /* Começa totalmente transparente */
+    transform: translateY(20px); /* Começa 20px deslocado para baixo */
+  }
+
+  to { /* Estado final (100% da animação) */
+    opacity: 1;                  /* Termina totalmente visível */
+    transform: translateY(0);    /* Termina na sua posição original (sem deslocamento) */
+  }
+}
+
+.book-card {
+  background-color: #f4f5f6;
+  border: 1px solid #8d99ae;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0px 4px 3px 0px #00000040;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  animation: fadeInUp 0.8s ease-out forwards; /* Aplicando a animação */
+}
+.book-card:hover {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); 
+}
+.book-card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px 12px 0 0;
+}
+
+.book-card h3 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 19px;
+}
+
+.rating {
+  color: red;
+  font-size: 28px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  -webkit-text-stroke: 1px #ef233c;
+}
+
+.logo{
+  background-color: #e8eaed;
+  border-radius: 12px;
+}
+
+.star-empty {
+  color: white;
+}
+/* --- Form Styles --- */
+
+/* Container que centraliza toda a seção do formulário na página */
+.form-page-container {
+  max-width: 800px;     /* Define uma largura máxima para o conteúdo não ficar muito esticado em telas grandes */
+  margin: 60px auto;    /* Adiciona 60px de margem em cima/embaixo e centraliza horizontalmente com 'auto' */
+}
+
+/* Título "New Review" da página */
+.form-page-container h2 {
+  text-align: center;   /* Centraliza o texto do título */
+  margin-bottom: 20px;  /* Cria um espaço abaixo do título, antes do card do formulário */
+  font-size: 36px;      /* Tamanho da fonte do título */
+  font-weight: 400;     /* Peso da fonte 'normal' */
+}
+
+/* O 'card' branco que envolve o formulário */
+.form-container {
+  background-color: #f4f5f6; /* Cor de fundo do card */
+  padding: 33px 61px;          /* Espaçamento interno (vertical e horizontal) para o conteúdo do formulário 'respirar' */
+  border-radius: 12px;         /* Arredonda os cantos do card */
+  box-shadow: 0px 4px 4px 0px #00000040; /* Adiciona uma sombra sutil para dar profundidade */
+}
+
+/* Agrupador para cada par de label e input */
+.form-group {
+  margin-bottom: 34px;     /* Cria um espaçamento vertical entre cada campo do formulário */
+  display: flex;             /* Ativa o Flexbox... */
+  flex-direction: column;    /* ...para garantir que o label fique em cima do input (em coluna) */
+}
+
+/* Estilo para os rótulos (labels) dos campos */
+.form-group label {
+  font-size: 24px;      /* Tamanho da fonte do rótulo */
+  margin-bottom: 6px;   /* Pequeno espaço entre o rótulo e o campo de entrada abaixo */
+}
+
+/* Estilo geral para todos os campos de entrada */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;                  /* Faz com que os campos ocupem toda a largura disponível */
+  padding: 12px;                /* Espaçamento interno para o texto digitado não ficar colado nas bordas */
+  border: 1px solid #e8eaed;    /* Borda sutil para os campos */
+  border-radius: 12px;          /* Arredonda os cantos dos campos de entrada */
+  font-size: 14px;              /* Tamanho da fonte para o texto que o usuário digita */
+  color: #333;                  /* Cor do texto digitado */
+  font-family: inherit;         /* Garante que os campos usem a mesma fonte definida no 'body' */
+}
+
+/* Container para colocar 'Stars' e 'Watched Date' lado a lado */
+.form-row {
+  display: flex; /* Ativa o Flexbox para alinhar os itens na horizontal */
+  gap: 20px;     /* Cria um espaço de 20px entre os dois campos */
+}
+
+/* Faz com que cada .form-group dentro de .form-row cresça e ocupe o espaço igualmente */
+.form-row .form-group {
+  flex: 1; /* flex: 1 é um atalho para flex-grow: 1, flex-shrink: 1, flex-basis: 0% */
+}
+
+/* Estilo do botão de submissão do formulário */
+.submit-button {
+  width: 100%;                  /* Faz o botão ocupar toda a largura */
+  padding: 12px;                /* Espaçamento interno */
+  background-color: #2b2d42;    /* Cor de fundo escura, igual ao header */
+  color: white;                 /* Cor do texto do botão */
+  border: none;                 /* Remove a borda padrão do navegador */
+  border-radius: 12px;          /* Arredonda os cantos do botão */
+  font-size: 20px;              /* Tamanho do texto do botão */
+  cursor: pointer;              /* Mostra a 'mãozinha' ao passar o mouse */
+  margin-top: 10px;             /* Espaço acima do botão */
+}
+.book-card-link {
+  color: inherit; /* Faz o link herdar a cor do texto do seu pai */
+  text-decoration: none; /* Remove o sublinhado */
+}
+/* --- book Details Page Styles --- */
+
+/* 1. O container principal que se parece com um grande card branco */
+.book-details-container {
+  /* Layout com Flexbox */
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(20px, 4vw, 65px);
+
+  /* Tamanho e Centralização na página */
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 55px auto;
+
+  /* Estilo Visual do Card */
+  background-color: #f4f5f6;
+  padding: clamp(20px, 6vw, 86px) clamp(20px, 6vw, 90px);
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+/* 2. A coluna do pôster e sua imagem */
+.book-poster {
+  flex: 0 1 380px;
+  min-width: 0;
+}
+
+.book-poster img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+}
+
+.book-details-info {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* 3. Estilos gerais para os textos na coluna da direita */
+.book-details-info h1 {
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+.book-details-info p {
+  font-size: 22px;
+  line-height: 1.5; 
+}
+
+/* 4. Estilos para os agrupamentos e detalhes finos */
+.book-section {
+  margin-bottom: 20px;
+}
+
+.rating-details {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.rating-details .rating {
+  margin: 0;
+}
+
+.review-title {
+  margin-bottom: 5px;
+}
+@media (max-width: 540px) {
+  .book-list-container {
+    justify-content: center;
+  }
+  .form-page-container {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .form-page-container h2 {
+    font-size: 30px;
+  }
+
+  .form-container {
+    padding: 25px 20px;
+  }
+
+  .form-group label {
+    font-size: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .book-details-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 30px 15px;
+  }
+
+  .book-poster img {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .rating {
+    font-size: 20px;
+  }
+
+  .book-details-info h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .book-details-info p {
+    font-size: 16px;
+  }
+}
+/* Estado quando o mouse está sobre o botão */
+.add-button:hover {
+  background-color: #d0182f; /* Um tom de vermelho mais escuro */
+}
+
+.submit-button {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #44476b;
+}
+
+.demo-notice {
+  max-width: 1020px;
+  margin: 20px auto 0;
+  padding: 12px 16px;
+  background-color: #fff3cd;
+  border: 1px solid #e0c36a;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.rating-text {
+  font-size: 18px;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 0 16px;
+  }
+
+  .book-details-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  .book-poster img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-card {
+    animation: none;
+  }
+
+  .add-button,
+  .book-card,
+  .logo-link,
+  .submit-button {
+    transition: none;
+  }
+}
