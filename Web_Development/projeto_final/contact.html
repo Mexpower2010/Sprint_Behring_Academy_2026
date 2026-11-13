@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abissal 4546B - Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <div>
+                <img class="logo" src="images/logo.svg" alt="Símbolo do projeto Abissal 4546B" height="40">
+                <span>Abissal 4546B</span>
+            </div>
+        </a>
+
+        <nav aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a class="menu-link" href="index.html">Início</a></li>
+                <li><a class="menu-link" href="about.html">O mar de 4546B</a></li>
+                <li><a class="menu-link menu-link-active" href="contact.html" aria-current="page">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contato" class="form-page-container">
+            <h1 id="page-title">Contato</h1>
+            <p class="form-intro">Este formulário é uma demonstração do projeto. Nenhuma mensagem é salva ou enviada
+                por e-mail, e os dados preenchidos aparecem apenas no endereço da página.</p>
+
+            <div class="form-container">
+                <form action="contact.html" method="get">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Enviar mensagem</button>
+                </form>
+            </div>
+
+            <p class="form-note">Demonstração com dados fictícios: não informe informações pessoais ou
+                confidenciais.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-title">Abissal 4546B</p>
+        <p>Site web criada para o projeto final da grandiosa Sprint Neps Academy.</p>
+        <p class="footer-copy">&copy; 2026 Abissal 4546B.</p>
+    </footer>
+</body>
+
+</html>

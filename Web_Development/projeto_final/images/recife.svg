@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+    <defs>
+        <linearGradient id="agua" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2a9fc9"/>
+            <stop offset="45%" stop-color="#12678c"/>
+            <stop offset="100%" stop-color="#062c42"/>
+        </linearGradient>
+        <linearGradient id="raio" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#d9f6ff" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#d9f6ff" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="areia" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#d8c9a3"/>
+            <stop offset="100%" stop-color="#a8946c"/>
+        </linearGradient>
+    </defs>
+
+    <rect width="800" height="500" fill="url(#agua)"/>
+
+    <polygon points="110,0 190,0 300,500 160,500" fill="url(#raio)"/>
+    <polygon points="370,0 425,0 520,500 425,500" fill="url(#raio)"/>
+    <polygon points="620,0 700,0 770,500 660,500" fill="url(#raio)"/>
+
+    <path d="M0 420 Q 120 392 240 418 T 480 408 T 800 428 L800 500 L0 500 Z" fill="url(#areia)"/>
+    <ellipse cx="150" cy="452" rx="78" ry="26" fill="#8d7c58"/>
+    <ellipse cx="640" cy="462" rx="96" ry="30" fill="#8d7c58"/>
+    <ellipse cx="430" cy="470" rx="60" ry="20" fill="#9c8b66"/>
+
+    <g stroke="#2f8f5b" stroke-width="9" stroke-linecap="round" fill="none">
+        <path d="M96 430 Q 84 360 104 300"/>
+        <path d="M120 432 Q 132 372 118 318"/>
+        <path d="M700 440 Q 688 366 706 306"/>
+        <path d="M726 444 Q 742 380 728 330"/>
+    </g>
+
+    <g fill="#ef6f6c">
+        <path d="M196 424 Q 186 372 200 344 Q 214 372 206 424 Z"/>
+        <path d="M212 424 Q 226 380 240 366 Q 244 396 226 424 Z"/>
+    </g>
+    <g fill="#f4a259">
+        <path d="M300 430 Q 292 388 304 366 Q 316 392 310 430 Z"/>
+        <path d="M316 430 Q 328 396 340 386 Q 342 410 328 430 Z"/>
+    </g>
+    <g fill="#9b5de5">
+        <path d="M520 434 Q 512 396 524 372 Q 536 398 530 434 Z"/>
+        <path d="M536 434 Q 548 402 560 392 Q 562 414 548 434 Z"/>
+    </g>
+
+    <g fill="#d9f6ff" opacity="0.85">
+        <circle cx="250" cy="120" r="4"/>
+        <circle cx="262" cy="96" r="3"/>
+        <circle cx="470" cy="150" r="4"/>
+        <circle cx="486" cy="128" r="3"/>
+        <circle cx="600" cy="200" r="3"/>
+        <circle cx="180" cy="210" r="3"/>
+    </g>
+
+    <g fill="#ffd166">
+        <g transform="translate(360 250)">
+            <ellipse cx="0" cy="0" rx="26" ry="14"/>
+            <polygon points="-24,0 -44,-14 -44,14"/>
+            <circle cx="14" cy="-3" r="3" fill="#062c42"/>
+        </g>
+        <g transform="translate(470 300) scale(0.8)">
+            <ellipse cx="0" cy="0" rx="26" ry="14"/>
+            <polygon points="-24,0 -44,-14 -44,14"/>
+            <circle cx="14" cy="-3" r="3" fill="#062c42"/>
+        </g>
+        <g transform="translate(250 330) scale(0.65)">
+            <ellipse cx="0" cy="0" rx="26" ry="14"/>
+            <polygon points="-24,0 -44,-14 -44,14"/>
+            <circle cx="14" cy="-3" r="3" fill="#062c42"/>
+        </g>
+    </g>
+
+    <g fill="#7fe3ff" opacity="0.7">
+        <g transform="translate(620 260) scale(0.9)">
+            <ellipse cx="0" cy="0" rx="24" ry="12"/>
+            <polygon points="22,0 40,-12 40,12"/>
+            <circle cx="-12" cy="-2" r="3" fill="#062c42"/>
+        </g>
+    </g>
+</svg>
